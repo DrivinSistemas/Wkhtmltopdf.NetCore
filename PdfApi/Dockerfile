@@ -8,8 +8,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["PdfApi/PdfApi.csproj", "PdfApi/"]
-RUN dotnet restore "PdfApi/PdfApi.csproj"
+COPY ["./PdfApi/PdfApi.csproj", "PdfApi/"]
+RUN dotnet restore "./PdfApi/PdfApi.csproj"
 COPY . .
 WORKDIR "/src/PdfApi"
 
